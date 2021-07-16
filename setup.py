@@ -17,7 +17,7 @@ setuptools.setup(
         "Programming Language :: Python :: 3.9",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
-        "Topic :: System :: Benchmark",
+        "Topic :: System :: Logging",
     ],
     python_requires='~=3.9',
 )
