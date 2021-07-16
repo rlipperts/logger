@@ -1,5 +1,5 @@
 # logging configurator
-Logger for simultaneous file and shell logging
+Simple configurator for the python logging package that allows simultaneous file and shell logging
 
 ## installation
 
