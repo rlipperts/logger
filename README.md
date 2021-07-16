@@ -32,7 +32,7 @@ logger.info('Log Horizon')
 If you need more complex argument parsing before you can configure the logger you can buffer it and have it logged once you configure your logger.
 
 ```python
-initial_log = log_helper.buffer_log()
+initial_log = logging_configurator.buffer_log()
 logger = logging.getLogger(__name__)
 logger.info('Early log information')
 
