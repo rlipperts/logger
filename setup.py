@@ -4,7 +4,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="loggin-configurator",
+    name="logging-configurator",
     version="0.0.2",
     author="Ruben Lipperts",
     author_email="",
