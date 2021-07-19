@@ -2,12 +2,22 @@
 Simple configurator for the python logging package that allows simultaneous file and shell logging
 
 ## installation
+There are no PyPI releases. Neither are they planned.
 
-For installation with pip directly from this GitHub repository simply open a terminal and type
+### manual
+For manual installation with pip directly from this GitHub repository simply open a terminal and type
 ```
 pip install git+ssh://git@github.com/rlipperts/logger.git
 ```
-There are no PyPI releases. Neither are they planned.
+
+### setup.py
+To automatically install the logging configurator with your python package include these lines in your setup.py
+```
+install_requires = [
+    'logging-configurator @ git+ssh://git@github.com/rlipperts/logger.git@master#egg=logging-configurator-0.0.2',
+],
+```
+Make sure you update the version in the `egg=logging-configurator-...` 'portion to the correct version specified in the logging-configurators setup.py. This might not work if you plan on publishing your package on PyPI.
 
 ## usage
 
