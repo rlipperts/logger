@@ -2,8 +2,8 @@ import logging
 from io import StringIO
 from pathlib import Path
 
-from file_log_formatter import UncoloredFileLogFormatter
-from shell_log_formatter import ColoredShellLogFormatter
+from .file_log_formatter import UncoloredFileLogFormatter
+from .shell_log_formatter import ColoredShellLogFormatter
 
 
 def setup_root_logger(shell_logging=True, file_logging=True, shell_log_lvl="info", file_log_lvl="debug",
