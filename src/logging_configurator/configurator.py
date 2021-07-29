@@ -6,9 +6,8 @@ from .file_log_formatter import UncoloredFileLogFormatter
 from .shell_log_formatter import ColoredShellLogFormatter
 
 
-def setup_root_logger(shell_logging=True, file_logging=True, shell_log_lvl="info", file_log_lvl="debug",
-                      logfile=Path('run.log')):
-
+def setup_root_logger(shell_logging=True, file_logging=True, shell_log_lvl="info",
+                      file_log_lvl="debug", logfile=Path('run.log')):
     logger = logging.getLogger()
     logging.root.setLevel(logging.NOTSET)
 
@@ -24,7 +23,8 @@ def setup_root_logger(shell_logging=True, file_logging=True, shell_log_lvl="info
         logfile.parent.mkdir(parents=True, exist_ok=True)
         file = logging.FileHandler(logfile, mode='w')
         file.setLevel(file_log_lvl.upper())
-        file_format = UncoloredFileLogFormatter('{asctime} - {process} - {name} - {levelname} - {message}', style='{')
+        file_format = UncoloredFileLogFormatter(
+            '{asctime} - {process} - {name} - {levelname} - {message}', style='{')
         file.setFormatter(file_format)
         logger.addHandler(file)
 

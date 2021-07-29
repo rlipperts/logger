@@ -25,6 +25,8 @@ setuptools.setup(
     package_dir={'': 'src'},
     packages=['logging_configurator'],
     package_data={'logging_configurator': ['py.typed']},
+    tests_require=test_deps,
+    extras_require=extras,
     classifiers=[
         "Programming Language :: Python :: 3.9",
         "License :: OSI Approved :: MIT License",

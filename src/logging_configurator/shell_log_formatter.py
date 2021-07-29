@@ -3,7 +3,6 @@ import logging
 
 
 class ColoredShellLogFormatter(logging.Formatter):
-
     shell_colors = {
         "NONE": '\033[0m',
         "DEBUG": '\033[0m',
@@ -17,10 +16,11 @@ class ColoredShellLogFormatter(logging.Formatter):
         super().__init__(fmt=fmt, style=style)
         """ colors is a dict { loglevel : shell_color } """
         self.formatters = {}
-        self.default_formatter = logging.Formatter("Requested Formatter not found! - {module}: {message}", style=style)
+        self.default_formatter = logging.Formatter(
+            "Requested Formatter not found! - {module}: {message}", style=style)
         for loglevel in colors:
-            self.formatters[loglevel] = logging.Formatter(ColoredShellLogFormatter.colorize(fmt, colors[loglevel]),
-                                                          style=style)
+            self.formatters[loglevel] = logging.Formatter(
+                ColoredShellLogFormatter.colorize(fmt, colors[loglevel]), style=style)
 
     def format(self, record):
         formatter = self.formatters.get(record.levelname, self.default_formatter)
