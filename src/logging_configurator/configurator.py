@@ -11,7 +11,7 @@ from .shell_log_formatter import ColoredShellLogFormatter
 
 
 def setup_root_logger(shell_logging=True, file_logging=True, shell_log_lvl="info",
-                      file_log_lvl="debug", logfile=Path('run.log')):
+                      file_log_lvl="debug", logfile=Path('run.log')) -> None:
     """
     Sets up the root logger, so every created logger inherits the desired configuration.
     :param shell_logging: Enable/disable logging to STDOUT
@@ -41,7 +41,7 @@ def setup_root_logger(shell_logging=True, file_logging=True, shell_log_lvl="info
         logger.addHandler(file)
 
 
-def buffer_log():
+def buffer_log() -> StringIO:
     """
     Allows to buffer log before the setup function is used to configure the logging process.
     Buffered log is formatted by logging.basicConfig, buffered and can be logged after the logging
