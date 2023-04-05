@@ -25,7 +25,7 @@ jobs:
         pip install .[test]
     - name: Lint with flake8
       run: |
-        flake8 src/logging_configurator
+        flake8 src/log_configurator
     - name: Lint with pylint
       run: |
-        pylint src/logging_configurator
+        pylint src/log_configurator

@@ -25,4 +25,4 @@ jobs:
         pip install .[test]
     - name: Typecheck with mypy
       run: |
-        mypy src/logging_configurator
+        mypy src/log_configurator
