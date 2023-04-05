@@ -14,17 +14,17 @@ extras = {
 }
 
 setuptools.setup(
-    name='logging-configurator',
+    name='log-configurator',
     version='0.0.2',
     author='Ruben Lipperts',
     author_email='',
-    description='Simple logger configuration for simultaneous file and shell logging',
+    description='Simple logging configuration for simultaneous file and shell logging',
     long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/rlipperts/logger',
     package_dir={'': 'src'},
-    packages=['logging_configurator'],
-    package_data={'logging_configurator': ['py.typed']},
+    packages=['log_configurator'],
+    package_data={'log_configurator': ['py.typed']},
     tests_require=test_deps,
     extras_require=extras,
     classifiers=[

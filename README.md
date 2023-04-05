@@ -22,8 +22,9 @@ Make sure you update the version in the `egg=logging-configurator-...` 'portion 
 ## usage
 
 Import the package and the default python logging
+
 ```python
-import logging_configurator
+import log_configurator
 import logging
 ```
 
