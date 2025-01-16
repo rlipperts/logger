@@ -1,13 +1,12 @@
 import setuptools
 
-with open("README.md", encoding="utf-8") as fh:
+with open("README.md", encoding="utf-8") as fh:  # noqa: PTH123
     long_description = fh.read()
 
 test_deps = [
     "pytest",
-    "flake8",
-    "pylint",
-    "mypy",
+    "ruff",
+    "pyright",
 ]
 extras = {
     "test": test_deps,
